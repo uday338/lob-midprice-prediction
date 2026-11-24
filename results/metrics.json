@@ -1,0 +1,379 @@
+{
+  "data_source": "SIMX_2012-06-21_34200000_57600000_message_10.csv",
+  "n_events": 400000,
+  "n_features": 36,
+  "horizon_events": 50,
+  "alpha": 2.459184370508145e-05,
+  "split_sizes": {
+    "train": 279950,
+    "val": 59950,
+    "test": 59950
+  },
+  "class_shares": {
+    "train": [
+      0.332,
+      0.333,
+      0.335
+    ],
+    "val": [
+      0.317,
+      0.319,
+      0.364
+    ],
+    "test": [
+      0.342,
+      0.341,
+      0.318
+    ]
+  },
+  "session_minutes_per_split": {
+    "train": 239.76249807106674,
+    "val": 73.07163868766669,
+    "test": 76.85511312853342
+  },
+  "random_baseline_macro_f1": {
+    "val": 0.33295741032143733,
+    "test": 0.3333335877521023,
+    "test_std": 0.0020352983437645017
+  },
+  "model_all_features": {
+    "macro_f1": {
+      "train": 0.5756430739425604,
+      "val": 0.4684336106395177,
+      "test": 0.47372697609765035
+    },
+    "best_iteration": 134,
+    "gain_importance_top10": {
+      "spread_bps": 0.1598,
+      "spread": 0.1246,
+      "cancel_imb_100": 0.0613,
+      "ask_gap_12": 0.0482,
+      "event_rate_100": 0.0466,
+      "bid_gap_12": 0.0443,
+      "ask_slope_5": 0.0433,
+      "bid_slope_5": 0.0418,
+      "rv_200": 0.04,
+      "trade_imb_200": 0.0377
+    },
+    "abs_price_gain_share": 0.08487593893620117,
+    "abs_price_gain_ranks": {
+      "mid_price": 16,
+      "best_bid": 15,
+      "best_ask": 14,
+      "microprice": 22,
+      "book_vwap_5": 30
+    },
+    "test_permutation_importance_abs_price": {
+      "mid_price": 0.0003,
+      "best_bid": 0.00075,
+      "best_ask": -0.00022,
+      "microprice": -0.00094,
+      "book_vwap_5": -0.00063
+    }
+  },
+  "train_vs_test_shift_auc": {
+    "book_vwap_5": 0.808,
+    "microprice": 0.807,
+    "mid_price": 0.807,
+    "best_ask": 0.806,
+    "best_bid": 0.804,
+    "event_rate_100": 0.778,
+    "log_time_since_trade": 0.577,
+    "imb_l10": 0.545,
+    "trade_imb_200": 0.533,
+    "cancel_imb_100": 0.526
+  },
+  "mid_price_range": {
+    "train": [
+      583.37,
+      589.36
+    ],
+    "val": [
+      585.735,
+      590.19
+    ],
+    "test": [
+      585.85,
+      589.565
+    ]
+  },
+  "model_no_abs_price": {
+    "n_features": 31,
+    "macro_f1": {
+      "train": 0.5544743337219725,
+      "val": 0.471441601005603,
+      "test": 0.47905295053170205
+    },
+    "best_iteration": 97,
+    "test_macro_f1_other_seeds": [
+      0.4799831819376865,
+      0.47849488469766466,
+      0.4767760274253086
+    ],
+    "lift_over_random_test_pct": 43.71577546753858,
+    "gain_importance_top10": {
+      "spread_bps": 0.1909,
+      "spread": 0.141,
+      "cancel_imb_100": 0.0681,
+      "ask_gap_12": 0.0553,
+      "bid_gap_12": 0.0486,
+      "ask_slope_5": 0.0485,
+      "bid_slope_5": 0.0484,
+      "event_rate_100": 0.0463,
+      "trade_imb_200": 0.0406,
+      "rv_200": 0.0383
+    },
+    "test_permutation_importance_top10": {
+      "cancel_imb_100": 0.02557,
+      "spread_bps": 0.02321,
+      "ask_gap_12": 0.01019,
+      "bid_gap_12": 0.00868,
+      "bid_slope_5": 0.00634,
+      "trade_imb_200": 0.00481,
+      "spread": 0.00456,
+      "event_rate_100": 0.00452,
+      "trade_imb_50": 0.00388,
+      "wmid5_dev": 0.00194
+    },
+    "test_confusion_matrix": [
+      [
+        8776,
+        6792,
+        4908
+      ],
+      [
+        4241,
+        12041,
+        4141
+      ],
+      [
+        5288,
+        5646,
+        8117
+      ]
+    ],
+    "test_report": {
+      "down": {
+        "precision": 0.47943184922152415,
+        "recall": 0.428599335807775,
+        "f1-score": 0.45259276449807895,
+        "support": 20476.0
+      },
+      "flat": {
+        "precision": 0.49189100861963314,
+        "recall": 0.5895803750673261,
+        "f1-score": 0.5363235490624025,
+        "support": 20423.0
+      },
+      "up": {
+        "precision": 0.47285331469183267,
+        "recall": 0.4260668731300194,
+        "f1-score": 0.4482425380346246,
+        "support": 19051.0
+      },
+      "accuracy": 0.48263552960800665,
+      "macro avg": {
+        "precision": 0.4813920575109966,
+        "recall": 0.4814155280017068,
+        "f1-score": 0.47905295053170205,
+        "support": 59950.0
+      },
+      "weighted avg": {
+        "precision": 0.48158573998153126,
+        "recall": 0.48263552960800665,
+        "f1-score": 0.47973467690511673,
+        "support": 59950.0
+      }
+    }
+  },
+  "backtest": {
+    "theta_chosen_on_val": 0.4,
+    "test": {
+      "theta": 0.4,
+      "n_trades": 545,
+      "hit_rate": 0.7926605504587156,
+      "mean_raw_pnl": 0.14666055045871426,
+      "mean_cost": 0.24976146788990577,
+      "mean_net_pnl": -0.10310091743119151,
+      "sharpe_raw": 0.5542518452144071,
+      "sharpe_net": -0.5576309187803851,
+      "total_raw_pnl": 79.92999999999927,
+      "total_net_pnl": -56.18999999999937,
+      "breakeven_cost": 0.14666055045871426
+    },
+    "test_non_overlapping": {
+      "theta": 0.4,
+      "n_trades": 75,
+      "hit_rate": 0.7466666666666667,
+      "mean_raw_pnl": 0.12433333333333091,
+      "mean_cost": 0.18806666666666463,
+      "mean_net_pnl": -0.06373333333333372,
+      "sharpe_raw": 0.3980483616290724,
+      "sharpe_net": -0.2078699133325893,
+      "total_raw_pnl": 9.324999999999818,
+      "total_net_pnl": -4.78000000000003,
+      "breakeven_cost": 0.12433333333333091
+    },
+    "theta_grid_val": [
+      {
+        "theta": 0.0,
+        "n_trades": 59950,
+        "hit_rate": 0.5591326105087573,
+        "mean_raw_pnl": 0.022783486238532102,
+        "mean_cost": 0.20462785654712148,
+        "mean_net_pnl": -0.18184437030858938,
+        "sharpe_raw": 0.1725482886627144,
+        "sharpe_net": -0.7823981499041368,
+        "total_raw_pnl": 1365.8699999999994,
+        "total_net_pnl": -10901.569999999934,
+        "breakeven_cost": 0.022783486238532102
+      },
+      {
+        "theta": 0.1,
+        "n_trades": 31385,
+        "hit_rate": 0.5928628325633264,
+        "mean_raw_pnl": 0.031800223036482736,
+        "mean_cost": 0.2024986458499272,
+        "mean_net_pnl": -0.17069842281344444,
+        "sharpe_raw": 0.24821238779262483,
+        "sharpe_net": -0.7742259355526213,
+        "total_raw_pnl": 998.0500000000108,
+        "total_net_pnl": -5357.3699999999535,
+        "breakeven_cost": 0.031800223036482736
+      },
+      {
+        "theta": 0.2,
+        "n_trades": 12454,
+        "hit_rate": 0.6265456881323269,
+        "mean_raw_pnl": 0.03863818853380448,
+        "mean_cost": 0.19688052031475786,
+        "mean_net_pnl": -0.15824233178095334,
+        "sharpe_raw": 0.3013549143578613,
+        "sharpe_net": -0.7210552121508853,
+        "total_raw_pnl": 481.20000000000095,
+        "total_net_pnl": -1970.749999999993,
+        "breakeven_cost": 0.03863818853380448
+      },
+      {
+        "theta": 0.3,
+        "n_trades": 3536,
+        "hit_rate": 0.6809954751131222,
+        "mean_raw_pnl": 0.05224264705882369,
+        "mean_cost": 0.19722567873302904,
+        "mean_net_pnl": -0.14498303167420534,
+        "sharpe_raw": 0.43141233302878623,
+        "sharpe_net": -0.6924918964619808,
+        "total_raw_pnl": 184.7300000000006,
+        "total_net_pnl": -512.6599999999901,
+        "breakeven_cost": 0.05224264705882369
+      },
+      {
+        "theta": 0.4,
+        "n_trades": 662,
+        "hit_rate": 0.7613293051359517,
+        "mean_raw_pnl": 0.06713746223565563,
+        "mean_cost": 0.21206193353474148,
+        "mean_net_pnl": -0.14492447129908584,
+        "sharpe_raw": 0.5965503951422103,
+        "sharpe_net": -0.7725372525490394,
+        "total_raw_pnl": 44.44500000000403,
+        "total_net_pnl": -95.93999999999482,
+        "breakeven_cost": 0.06713746223565563
+      },
+      {
+        "theta": 0.5,
+        "n_trades": 57,
+        "hit_rate": 0.7894736842105263,
+        "mean_raw_pnl": 0.046140350877210856,
+        "mean_cost": 0.22894736842104685,
+        "mean_net_pnl": -0.182807017543836,
+        "sharpe_raw": 0.5484128254889077,
+        "sharpe_net": -1.3661247248844428,
+        "total_raw_pnl": 2.6300000000010186,
+        "total_net_pnl": -10.419999999998652,
+        "breakeven_cost": 0.046140350877210856
+      }
+    ],
+    "theta_grid_test": [
+      {
+        "theta": 0.0,
+        "n_trades": 59950,
+        "hit_rate": 0.5570642201834862,
+        "mean_raw_pnl": 0.02454970809007577,
+        "mean_cost": 0.2104559633027515,
+        "mean_net_pnl": -0.1859062552126757,
+        "sharpe_raw": 0.15895883566915936,
+        "sharpe_net": -0.6834928031249441,
+        "total_raw_pnl": 1471.7550000000424,
+        "total_net_pnl": -11145.079999999909,
+        "breakeven_cost": 0.02454970809007577
+      },
+      {
+        "theta": 0.1,
+        "n_trades": 29745,
+        "hit_rate": 0.6102538241721298,
+        "mean_raw_pnl": 0.04455421079173055,
+        "mean_cost": 0.20679862161707735,
+        "mean_net_pnl": -0.16224441082534682,
+        "sharpe_raw": 0.2833108362811758,
+        "sharpe_net": -0.6788303784017347,
+        "total_raw_pnl": 1325.2650000000253,
+        "total_net_pnl": -4825.959999999941,
+        "breakeven_cost": 0.04455421079173055
+      },
+      {
+        "theta": 0.2,
+        "n_trades": 11738,
+        "hit_rate": 0.6556483216902368,
+        "mean_raw_pnl": 0.06411100698585798,
+        "mean_cost": 0.20347887203952753,
+        "mean_net_pnl": -0.13936786505366955,
+        "sharpe_raw": 0.3776732801343134,
+        "sharpe_net": -0.6578846684992967,
+        "total_raw_pnl": 752.535000000001,
+        "total_net_pnl": -1635.8999999999733,
+        "breakeven_cost": 0.06411100698585798
+      },
+      {
+        "theta": 0.3,
+        "n_trades": 3342,
+        "hit_rate": 0.7390783961699581,
+        "mean_raw_pnl": 0.09315828845003313,
+        "mean_cost": 0.21555804907240697,
+        "mean_net_pnl": -0.12239976062237382,
+        "sharpe_raw": 0.48722389310200187,
+        "sharpe_net": -0.6174466229755918,
+        "total_raw_pnl": 311.3350000000107,
+        "total_net_pnl": -409.0599999999733,
+        "breakeven_cost": 0.09315828845003313
+      },
+      {
+        "theta": 0.4,
+        "n_trades": 545,
+        "hit_rate": 0.7926605504587156,
+        "mean_raw_pnl": 0.14666055045871426,
+        "mean_cost": 0.24976146788990577,
+        "mean_net_pnl": -0.10310091743119151,
+        "sharpe_raw": 0.5542518452144071,
+        "sharpe_net": -0.5576309187803851,
+        "total_raw_pnl": 79.92999999999927,
+        "total_net_pnl": -56.18999999999937,
+        "breakeven_cost": 0.14666055045871426
+      },
+      {
+        "theta": 0.5,
+        "n_trades": 45,
+        "hit_rate": 0.7777777777777778,
+        "mean_raw_pnl": 0.27277777777778234,
+        "mean_cost": 0.38166666666666565,
+        "mean_net_pnl": -0.10888888888888333,
+        "sharpe_raw": 0.8221903242794315,
+        "sharpe_net": -1.2239616377850564,
+        "total_raw_pnl": 12.275000000000205,
+        "total_net_pnl": -4.89999999999975,
+        "breakeven_cost": 0.27277777777778234
+      }
+    ],
+    "avg_spread_test": 0.2104550458715588
+  }
+}

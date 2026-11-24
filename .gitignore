@@ -1,0 +1,5 @@
+data/simulated/
+data/lobster/
+__pycache__/
+.ipynb_checkpoints/
+results_real/
